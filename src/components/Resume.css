@@ -1,0 +1,77 @@
+.resume {
+  padding: 5rem 0;
+  background-color: #f9fafb;
+}
+
+.section-description {
+  color: #6b7280;
+  line-height: 1.75;
+  margin-top: 1.5rem;
+}
+
+.resume-content {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .resume-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.resume-section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid #2563eb;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -0.5rem;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  background-color: #2563eb;
+  border-radius: 50%;
+}
+
+.timeline-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-years {
+  background-color: #e5e7eb;
+  color: #374151;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-institution {
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-description {
+  color: #6b7280;
+}

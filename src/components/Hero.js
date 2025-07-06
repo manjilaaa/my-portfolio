@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-
+import './Hero.css';
+import myProfile from '../assets/my-profile.jpg';
 function Hero() {
   useEffect(() => {
-    // Load typed.js from your template assets
     const typedScript = document.createElement('script');
-    typedScript.src = `${process.env.PUBLIC_URL}/assets/vendor/typed.js/typed.umd.js`;
+    typedScript.src = 'https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js';
     typedScript.onload = () => {
       if (window.Typed) {
         new window.Typed('.typed', {
@@ -12,19 +12,37 @@ function Hero() {
           typeSpeed: 100,
           backSpeed: 50,
           backDelay: 2000,
-          loop: true
+          loop: true,
+          showCursor: true,
+          cursorChar: '|',
         });
       }
     };
     document.body.appendChild(typedScript);
+
+    return () => {
+      document.body.removeChild(typedScript);
+    };
   }, []);
 
   return (
-    <section id="hero" className="d-flex flex-column justify-content-center">
-      <div className="container" data-aos="fade-in">
-        <h1>Manjila Thapa</h1>
-        <p>
-          I'm <span className="typed" data-typed-items="Frontend Developer, Coder, Learner"></span>
+    <section id="hero" className="hero"
+        style={{
+        backgroundImage: `url(${myProfile})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        height: '100vh',
+      }}
+      
+      >
+      <div className="hero-overlay"></div>
+      <div className="hero-background"></div>
+
+      <div className="hero-content">
+        <h1 className="hero-title">Manjila Thapa</h1>
+        <p className="hero-subtitle">
+          I'm&nbsp;  <span className="typed"></span>
         </p>
         <div className="social-links">
           <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>

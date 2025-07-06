@@ -1,66 +1,113 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { MapPin, Mail, Phone } from 'lucide-react';
+import './Contact.css';
 
-function Contact() {
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    alert('Thank you for your message! I will get back to you soon.');
+    setFormData({ name: '', email: '', subject: '', message: '' });
+  };
+
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <div className="section-title">
-          <h2>Contact</h2>
-          <p>Feel free to reach out to me!</p>
+        <div className="section-header">
+          <h2 className="section-title">Contact</h2>
+          <div className="section-underline"></div>
+          <p className="section-description">
+            Feel free to reach out to me anytime — I’m always open to discuss projects or collaborations!
+          </p>
         </div>
 
-        <div className="row">
-          <div className="col-lg-5 d-flex align-items-stretch">
-            <div className="info">
-              <div className="address">
-                <i className="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Lokanthali, Bhaktapur, Nepal</p>
-              </div>
+        <div className="contact-info">
+          <div className="contact-card">
+            <MapPin className="contact-icon" />
+            <h3 className="contact-title">Location</h3>
+            <p className="contact-text">Lokanthali, Bhaktapur, Nepal</p>
+          </div>
+          
+          <div className="contact-card">
+            <Phone className="contact-icon" />
+            <h3 className="contact-title">Call</h3>
+            <p className="contact-text">+977 9824084878</p>
+          </div>
+          
+          <div className="contact-card">
+            <Mail className="contact-icon" />
+            <h3 className="contact-title">Email</h3>
+            <p className="contact-text">manjila2059@gmail.com</p>
+          </div>
+        </div>
 
-              <div className="email">
-                <i className="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>manjila2059@gmail.com</p>
-              </div>
-
-              <div className="phone">
-                <i className="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+977 9824084878</p>
-              </div>
+        <div className="contact-form-container">
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div className="form-row">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="form-input"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="form-input"
+              />
             </div>
-          </div>
-
-          <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form className="php-email-form" onSubmit={(e) => e.preventDefault()}>
-              <div className="row">
-                <div className="form-group col-md-6">
-                  <label>Your Name</label>
-                  <input type="text" className="form-control" required />
-                </div>
-                <div className="form-group col-md-6">
-                  <label>Your Email</label>
-                  <input type="email" className="form-control" required />
-                </div>
-              </div>
-              <div className="form-group">
-                <label>Subject</label>
-                <input type="text" className="form-control" required />
-              </div>
-              <div className="form-group">
-                <label>Message</label>
-                <textarea className="form-control" rows="5" required></textarea>
-              </div>
-              <div className="text-center">
-                <button type="submit">Send Message</button>
-              </div>
-            </form>
-          </div>
+            
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+              className="form-input"
+            />
+            
+            <textarea
+              name="message"
+              placeholder="Message"
+              rows={6}
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="form-textarea"
+            ></textarea>
+            
+            <div className="form-submit">
+              <button type="submit" className="submit-btn">
+                Send Message
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Contact;
