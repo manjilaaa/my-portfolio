@@ -6,6 +6,16 @@
   height: 40vmin;
   pointer-events: none;
 }
+.content-wrapper {
+  margin-left: 300px;
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 1023px) {
+  .content-wrapper {
+    margin-left: 0;
+  }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

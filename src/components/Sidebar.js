@@ -7,6 +7,8 @@ import {
   MessageSquare,
   Menu,
   X,
+  Code,
+  Settings,
   Facebook,
   Instagram,
   Github,
@@ -22,8 +24,10 @@ const Sidebar = () => {
   const navItems = [
     { id: 'hero', label: 'Home', icon: Home },
     { id: 'about', label: 'About', icon: User },
+     { id: 'skills', label: 'Skills', icon: Code },
+
     { id: 'resume', label: 'Resume', icon: FileText },
-    { id: 'portfolio', label: 'Portfolio', icon: Briefcase },
+    { id: 'portfolio', label: 'Projects', icon: Briefcase },
     { id: 'contact', label: 'Contact', icon: MessageSquare },
   ];
 
@@ -49,21 +53,21 @@ const Sidebar = () => {
 
             <div className="social-links">
               <a
-                href="https://www.facebook.com/your-profile"
+                href="https://www.facebook.com/manzeela.xettry"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
               >
                 <Facebook size={16} />
               </a>
-              <a
+              {/* <a
                 href="https://www.instagram.com/your-profile"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
               >
                 <Instagram size={16} />
-              </a>
+              </a> */}
               <a
                 href="https://github.com/manjilaaa"
                 target="_blank"

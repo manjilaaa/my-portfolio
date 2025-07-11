@@ -17,17 +17,19 @@ function App() {
   return (
     <>
    <Sidebar/>
-      {/* <Navbar/> */}
-        <div style={{ marginLeft: '300px' }}>
-
+     
+      
+       <div className="content-wrapper">
       <Hero/>
       <About/>
       <Skills/>
       <Resume/>
       <Portfolio/>
       <Contact/>
+       </div>
+     
    
-      </div>
+     
     </>
   );
 }

@@ -5,17 +5,26 @@ const projects = [
   {
     id: 1,
     title: 'Tourism Website – Patanagi',
-    tech: 'React, MySQL, Node.js',
-    image: `${process.env.PUBLIC_URL}/assets/img/portfolio/project1.jpg`,
-    live: 'https://patanagi.vercel.app',
-    github: 'https://github.com/manjilaaa/patanagi-tourism',
+    tech: 'React, MySQL, Next.js',
+    image: `${process.env.PUBLIC_URL}/assets/img/portfolio/project1.png`,
+    live: 'https://tourism-site-two.vercel.app/',
+    github: 'https://github.com/manjilaaa/tourism-site',
   },
+  
+  // {
+  //   id: 3,
+  //   title: 'SpecSpecs',
+  //   tech: 'React',
+  //   image: `${process.env.PUBLIC_URL}/assets/img/portfolio/project2.png`,
+  //   live: 'https://patanagi.vercel.app',
+  //   github: 'https://github.com/manjilaaa/Egov_portal.git',
+  // },
   {
     id: 2,
     title: 'PAN Registration System',
     tech: 'React, Next.js API, MySQL',
-    image: `${process.env.PUBLIC_URL}/assets/img/portfolio/project2.jpg`,
-    live: 'https://patanagi.vercel.app',
+    image: `${process.env.PUBLIC_URL}/assets/img/portfolio/project2.png`,
+    // live: 'https://patanagi.vercel.app',
     github: 'https://github.com/manjilaaa/Egov_portal.git',
   },
 ];
@@ -25,7 +34,7 @@ function Portfolio() {
     <section id="portfolio" className="portfolio">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Portfolio</h2>
+          <h2 className="section-title">Projects</h2>
           <div className="section-underline"></div>
           <p className="section-description">
             Some of the projects I’ve built recently.

@@ -23,12 +23,12 @@ const Skills = () => {
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
           <h2 style={{ fontSize: '32px', marginBottom: '10px' }}>Skills</h2>
-          <div style={{
+          {/* <div style={{
             width: '60px',
             height: '4px',
-            backgroundColor: '#007bff',
+            backgroundColor: 'pink',
             margin: '0 auto',
-          }}></div>
+          }}></div> */}
         </div>
 
         <div>
@@ -39,9 +39,11 @@ const Skills = () => {
             color: '#555',
             lineHeight: '1.6'
           }}>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
-            Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-            Quia fugiat sit in iste officiis commodi quidem hic quas.
+           I have a solid foundation in frontend web development with expertise
+            in building responsive and interactive user interfaces. Skilled in
+            modern JavaScript frameworks like React.js and Next.js, with
+            hands-on experience in database management using MySQL and
+            version control with Git and GitHub.
           </p>
         </div>
 
